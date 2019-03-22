@@ -13,31 +13,125 @@ body{
 }
 
 #header-nav{
+    width: 100%;
     height: 80px;
 }
 
+@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
+@media (max-width:500px){
+    .github-corner:hover .octo-arm{
+        animation:none
+    }
+    .github-corner .octo-arm{
+        animation:octocat-wave 560ms ease-in-out
+    }
+}
+
+.github-corner:hover .octo-arm{
+    animation:octocat-wave 560ms ease-in-out
+}
+
+#wrapper{
+    width: 100%;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.lf-box{
+    width: 100%;
+}
+
+
+.lf-box-one-quarter{
+    width: 80%;
+}
+
+.lf-box-quarter{
+    width: 20%;
+}
+
+.lf-box-flex-end{
+    align-content: flex-end
+}
+
+#gray-scale{
+    background-color: #3A3A3A;
+    outline: #40E0D0;
+    border: 1px solid#40E0D0;
+    cursor: pointer;
+}
+
+.lf-input{
+    width: 95%;
+    height: 40px;
+    padding-left: 1%;
+    outline: none;
+}
+
+.lf-input:focus{
+    border: 1px solid#40E0D0;
+}
+
 #hero{
-    margin-top: 10%;
+    margin: 0 auto;
+    height: 100%;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
 }
 
 .hero-text{
     text-align: center;
+    padding: 0 10%;
+    margin: 0 auto;
+    font-size: 16px;
 }
 
 .hero-search{
     padding: 0 15%;
+    align-items: center;
+    justify-content: center;
 }
 
-.content{
+#content{
     background-color: #3A3A3A;
+    height: 100%;
+    width: 100%;
+    /* margin: 0 auto; */
+}
+
+.result-animation{
+    animation-name: slideup;
+    -webkit-animation-name: slideup;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+}
+
+@keyframes slideup{
+    from{
+        height: 100%;
+    }
+    to{    
+        height: 50%;
+    }
+}
+
+.find-btn-position{
+    margin: 0 auto;
 }
 
 .find-btn{
     font-size: 18px;
     background-color: #40E0D0;
     color: #ffffff;
-    width: 20%;
-    margin: 0 auto;
+    width: 95%;
+    height: 45px;
+    border: 1px solid #40E0D0;
+    cursor: pointer;
 }
 .find-btn:hover{
     background-color: rgb(53, 177, 164);
@@ -50,15 +144,122 @@ body{
     font-weight: 500;
 }
 
-.github-corner:hover .octo-arm{
-    animation:octocat-wave 560ms ease-in-out
+/* #logo-result{
+    margin-top: 2%;
+    position: absolute;
+    z-index: -10px;
+    width: 100%;
+    height: 200px;
+    background-color: #FFFFFF;
+} */
+
+.lf-social-icons{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 20px;
 }
-@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}
-@media (max-width:500px){
-    .github-corner:hover .octo-arm{
-        animation:none
+
+.lf-footer-box-one{
+    padding: 3px 0px;
+}
+
+.lf-footer-box-two{
+    padding: 3px 0px;
+    margin: 0 13%;
+    border-left: 1px #40E0D0 solid;
+    border-right: 1px #40E0D0 solid;
+}
+
+.lf-footer-box-three{
+    padding: 3px 0px;
+}
+
+#footer-bg{
+    background-color: #3A3A3A;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%
+}
+
+.footer-link{
+    color: #40E0D0;
+    text-decoration: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.footer-link:hover{
+    color: rgb(53, 177, 164);
+}
+
+.footer-row{
+    text-align: center;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+.vertical-line {
+    border-left: 1px solid #40E0D0;
+    margin-left: 1%;
+    margin-right: 2%;
+    height: 500px;
+  }
+
+
+@media screen and (min-width: 600px){
+    .hero-text{
+        padding: 0 20%;
+        font-size: 20px;
     }
-    .github-corner .octo-arm{
-        animation:octocat-wave 560ms ease-in-out
+    .lf-footer-box-two{
+        padding: 3px 0px;
+        margin: 0 30%;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .hero-text{
+        padding: 0 28%;
+        font-size: 23px;
+    }
+    .lf-box-one-quarter{
+        width: 70%;
+    } 
+    .lf-box-quarter{
+        width: 13%;
+    }
+    .lf-input{
+        width: 95%;
+    }
+    .find-btn{
+        width: 95%;
+        padding-left: 1%;
+    }
+    .lf-footer-box-two{
+        margin: 0%;
+        border: none;
+    }
+    .lf-box{
+        width: 33.3%;
+    }
+    .lf-footer-box-one {
+        order: 3;
+        text-align: right;
+        width: 400px;
+    }
+    .lf-footer-box-two {
+        order: 1;
+        text-align: left;
+        width: 220px;
+        border-right: 1px solid #40E0D0;
+    }
+    .lf-footer-box-three {
+        order: 2;
+        text-align: left;
+        padding-left: 1%;
+    }
+    .footer-row{
+        padding-left: 3%;
+        padding-right: 3%;
     }
 }
