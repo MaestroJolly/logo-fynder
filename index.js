@@ -1,7 +1,7 @@
 var express = require('express')
 var app = express()
 var request = require('request');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var port = process.env.PORT || 3030
 
 app.use(bodyParser.urlencoded({
@@ -31,6 +31,7 @@ app.post('/fetch-logo', function(req, res){
             console.log('error:', error); // Print the error if one occurred
             console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
             console.log(response.headers['content-type']) // 'image/png'
+            console.log(body)
             res.send(body)
         });
     }
