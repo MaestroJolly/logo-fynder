@@ -1,4 +1,4 @@
-var form, companyLink, greyScale, logoSize, content, logoResult, timeout, img;
+var form, companyLink, greyScale, logoSize, content, link, size, logoResult, timeout, img, imgDiv;
 
 form = $("form");
 companyLink = $("#company-link");
@@ -6,43 +6,58 @@ greyScale = $("#greyscale");
 logoSize = $("#logo-size");
 logoResult = $("#logo-result");
 content = $("#content");
-img = $("#img");
+imgDiv = $("#img-div");
 timeout = 1000;
 
 form.submit(function(event){
     event.preventDefault();
     if (!content.hasClass("result-animation")){
         content.toggleClass("result-animation");
-        content.height("50%");
+        content.height("100%");
         logoResult.css("display", "block");
         setTimeout(function(){
-            $.ajax({
-                type: "POST",
-                url: "/fetch-logo",
-                responseType: 'blob',
-                data: {
-                    link: companyLink.val(),
-                    size: logoSize.val(),
-                    greyscale: greyScale.prop("checked")
-                },
-                success: function(data){
-                    // console.log(data);
-                    console.log("worked");
-                    // logoResult.html(data);
-                    var blob = new Blob([data], { type: 'image/png' });
-                    var url = window.URL || window.webkitURL;
-                    console.log(url.createObjectURL(blob));
-                    // img.src = url.createObjectURL(blob);
-                    img.attr("src", url.createObjectURL(blob));
-                    console.log(img);
-                },
-                error: function(error){
-                    console.log(error);
+            size = logoSize.val();
+            greyscale = greyScale.prop("checked");
+            link = "https://logo.clearbit.com/";
+            link += companyLink.val();
+
+            if(size && greyscale){
+                link += '?size=' + size + '&greyscale=' + greyscale;
+            }else{
+                if(size){
+                    link += '?size=' + size;
                 }
-            })
+                if(greyscale){
+                    link += '?greyscale=' + greyscale;
+                }
+            }
+            console.log(link);
+            img = $('<img>');
+            img.attr("src", link);
+            img.appendTo(imgDiv);
+        }, timeout);
+    }else{
+        img.remove();
+        link = "https://logo.clearbit.com/";
+        setTimeout(function(){
+            size = logoSize.val();
+            greyscale = greyScale.prop("checked");
+            link += companyLink.val();
+
+            if(size && greyscale){
+                link += '?size=' + size + '&greyscale=' + greyscale;
+            }else{
+                if(size){
+                    link += '?size=' + size;
+                }
+                if(greyscale){
+                    link += '?greyscale=' + greyscale;
+                }
+            }
+            console.log(link);
+            img = $('<img>');
+            img.attr("src", link);
+            img.appendTo(imgDiv);
         }, timeout);
     }
-    console.log(companyLink.val());
-    console.log(greyScale.prop("checked"));
-    console.log(logoSize.val());
 });
