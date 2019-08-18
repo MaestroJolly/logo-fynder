@@ -1,7 +1,8 @@
-var form, companyLink, greyScale, logoSize, content, link, size, logoResult, timeout, img, imgDiv;
+var form, companyLink, companyUrl, greyScale, logoSize, content, link, size, logoResult, timeout, img, imgDiv;
 
 form = $("form");
 companyLink = $("#company-link");
+companyUrl = $(".company-url");
 greyScale = $("#greyscale");
 logoSize = $("#logo-size");
 logoResult = $("#logo-result");
@@ -31,9 +32,9 @@ form.submit(function(event){
                     link += '?greyscale=' + greyscale;
                 }
             }
-            console.log(link);
             img = $('<img>');
             img.attr("src", link);
+            companyUrl.text(companyLink.val());
             img.appendTo(imgDiv);
         }, timeout);
     }else{
@@ -54,9 +55,9 @@ form.submit(function(event){
                     link += '?greyscale=' + greyscale;
                 }
             }
-            console.log(link);
             img = $('<img>');
             img.attr("src", link);
+            companyUrl.text(companyLink.val());
             img.appendTo(imgDiv);
         }, timeout);
     }
