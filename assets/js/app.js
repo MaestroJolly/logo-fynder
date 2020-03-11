@@ -2,7 +2,6 @@ var form, companyLink, companyUrl, greyScale, logoSize, content, link, size, log
 
 form = $("form");
 companyLink = $("#company-link");
-companyUrl = $(".company-url");
 greyScale = $("#greyscale");
 logoSize = $("#logo-size");
 logoResult = $(".result");
@@ -34,8 +33,12 @@ form.submit(function(event){
             }
             img = $('<img>');
             img.attr("src", link);
+            companyUrl = $("<p>");
+            companyUrl.attr("class", "company-url");
             companyUrl.text(companyLink.val());
+            imgDiv.attr("class", "img-border");
             img.appendTo(imgDiv);
+            companyUrl.appendTo(imgDiv);
         }, timeout);
     }else{
         img.remove();
@@ -57,8 +60,12 @@ form.submit(function(event){
             }
             img = $('<img>');
             img.attr("src", link);
+            companyUrl = $("<p>");
+            companyUrl.attr("class", "company-url");
             companyUrl.text(companyLink.val());
+            imgDiv.attr("class", "img-border");
             img.appendTo(imgDiv);
+            companyUrl.appendTo(imgDiv);
         }, timeout);
     }
 });
