@@ -1,4 +1,4 @@
-var form, companyLink, companyUrl, greyScale, logoSize, content, link, size, logoResult, timeout, img, imgDiv;
+var form, companyLink, companyUrl, greyScale, logoSize, content, link, size, logoResult, timeout, img, imgDiv, modalClose;
 
 form = $("form");
 companyLink = $("#company-link");
@@ -7,7 +7,19 @@ logoSize = $("#logo-size");
 logoResult = $(".result");
 content = $("#content");
 imgDiv = $("#img-div");
+modalClose = $(".close");
 timeout = 1000;
+
+modalClose.hover(function(){
+    
+    if($ ( this ).hasClass('fa-2x')){
+        $( this ).removeClass('fa-2x');
+        $( this ).addClass('fa-3x');
+    }else{
+        $( this ).addClass('fa-2x');
+        $( this ).removeClass('fa-3x');
+    }
+})
 
 form.submit(function(event){
     event.preventDefault();
