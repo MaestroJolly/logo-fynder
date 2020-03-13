@@ -10,24 +10,18 @@ imgDiv = $("#img-div");
 modalClose = $(".close");
 timeout = 1000;
 
-modalClose.hover(function(){
-    
-    if($ ( this ).hasClass('fa-2x')){
-        $( this ).removeClass('fa-2x');
-        $( this ).addClass('fa-3x');
-    }else{
-        $( this ).addClass('fa-2x');
-        $( this ).removeClass('fa-3x');
-    }
+modalClose.click(function(){
+    logoResult.css('display', 'none');
+    img.remove();
+    companyUrl.remove();
 })
 
 form.submit(function(event){
     event.preventDefault();
-    if (!content.hasClass("result-animation")){
-        content.toggleClass("result-animation");
-        content.height("100%");
+    // if (!content.hasClass("result-animation")){
+        // content.toggleClass("result-animation");
+        // content.height("100%");
         logoResult.css("display", "block");
-        setTimeout(function(){
             size = logoSize.val();
             greyscale = greyScale.prop("checked");
             link = "https://logo.clearbit.com/";
@@ -51,33 +45,29 @@ form.submit(function(event){
             imgDiv.attr("class", "img-border");
             img.appendTo(imgDiv);
             companyUrl.appendTo(imgDiv);
-        }, timeout);
-    }else{
-        img.remove();
-        link = "https://logo.clearbit.com/";
-        setTimeout(function(){
-            size = logoSize.val();
-            greyscale = greyScale.prop("checked");
-            link += companyLink.val();
+    // }else{
+    //     link = "https://logo.clearbit.com/";
+    //     size = logoSize.val();
+    //     greyscale = greyScale.prop("checked");
+    //     link += companyLink.val();
 
-            if(size && greyscale){
-                link += '?size=' + size + '&greyscale=' + greyscale;
-            }else{
-                if(size){
-                    link += '?size=' + size;
-                }
-                if(greyscale){
-                    link += '?greyscale=' + greyscale;
-                }
-            }
-            img = $('<img>');
-            img.attr("src", link);
-            companyUrl = $("<p>");
-            companyUrl.attr("class", "company-url");
-            companyUrl.text(companyLink.val());
-            imgDiv.attr("class", "img-border");
-            img.appendTo(imgDiv);
-            companyUrl.appendTo(imgDiv);
-        }, timeout);
-    }
+    //     if(size && greyscale){
+    //         link += '?size=' + size + '&greyscale=' + greyscale;
+    //     }else{
+    //         if(size){
+    //             link += '?size=' + size;
+    //         }
+    //         if(greyscale){
+    //             link += '?greyscale=' + greyscale;
+    //         }
+    //     }
+    //     img = $('<img>');
+    //     img.attr("src", link);
+    //     companyUrl = $("<p>");
+    //     companyUrl.attr("class", "company-url");
+    //     companyUrl.text(companyLink.val());
+    //     imgDiv.attr("class", "img-border");
+    //     img.appendTo(imgDiv);
+    //     companyUrl.appendTo(imgDiv);
+    // }
 });
