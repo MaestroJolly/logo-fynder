@@ -1,6 +1,6 @@
 # logo-fynder
 
-![Logofynder Logo](https://res.cloudinary.com/maestrojolly/image/upload/v1583789257/yusuf-jolaoso/LogoFynder-Logo.png)
+[![Logofynder Logo](https://res.cloudinary.com/maestrojolly/image/upload/v1583789257/yusuf-jolaoso/LogoFynder-Logo.png)](https://logofynder.herokuapp.com/)
 
 This is a simple app to find logos from various top websites.
 
@@ -10,6 +10,7 @@ This is a simple app to find logos from various top websites.
 - [How to get started](#how-to-get-started)
 - [Languages/Tools used](#languages/tools-used)
 - [Credits](#credits)
+- [Link](#link)
 
 ## Pre-requisites
 
@@ -46,5 +47,9 @@ This is a simple app to find logos from various top websites.
 - [Cloudinary](http://cloudinary.com/)
 - [Clearbit API](https://clearbit.com/)
 - [jQuery](https://jquery.com/download/)
+
+## Link
+
+Click [Here](https://logofynder.herokuapp.com/) to explore this app online.
 
 
