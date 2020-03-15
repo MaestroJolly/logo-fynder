@@ -16,7 +16,7 @@ This is a simple app to find logos from various top websites.
 
 - [Node.js](https://nodejs.org/en/download/) - It is a JavaScript runtime built on Chrome's V8 JavaScript engine. This is needed to start this app, please click [here](https://nodejs.org/en/download/) to download and install this.
 - [NPM](https://nodejs.org/en/download/) - npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. This usually comes along with Node.js installed.
-- Basic knowledge of HTML, CSS, Node.js
+- Basic knowledge of HTML, CSS, JavaScript, Node.js
 
 ## How To Get Started
 
