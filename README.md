@@ -1,17 +1,21 @@
 # logo-fynder
+
+![Logofynder Logo](https://res.cloudinary.com/maestrojolly/image/upload/v1583789257/yusuf-jolaoso/LogoFynder-Logo.png)
+
 This is a simple app to find logos from various top websites.
 
 ## Table Of Contents
 
 - [Pre-requisites](#pre-requisites)
 - [How to get started](#how-to-get-started)
-- Languages/Tools used
-- Credits
+- [Languages/Tools used](#languages/tools-used)
+- [Credits](#credits)
 
 ## Pre-requisites
 
-- Node.js - It is a JavaScript runtime built on Chrome's V8 JavaScript engine. This is needed to start this app, please click [here](https://nodejs.org/en/download/) to download and install this.
-- NPM
+- [Node.js](https://nodejs.org/en/download/) - It is a JavaScript runtime built on Chrome's V8 JavaScript engine. This is needed to start this app, please click [here](https://nodejs.org/en/download/) to download and install this.
+- [NPM](https://nodejs.org/en/download/) - npm is a package manager for the JavaScript programming language. It is the default package manager for the JavaScript runtime environment Node.js. This usually comes along with Node.js installed.
+- Basic knowledge of HTML, CSS, Node.js
 
 ## How To Get Started
 
@@ -27,5 +31,20 @@ This is a simple app to find logos from various top websites.
 ![Logofynder](https://res.cloudinary.com/maestrojolly/image/upload/v1584273810/logo-fynder/logofynder.png)
 
 - Yaay, your app is up and running :smiley: :rocket: :rocket: :rocket:
+
+## Languages/Tools Used
+
+- HTML
+- CSS
+- JavaScript
+- Node.js
+
+## Credits
+
+- [Google Font APIs](https://developers.google.com/fonts/docs/getting_started)
+- [Font Awesome](https://fontawesome.com/v4.7.0/)
+- [Cloudinary](http://cloudinary.com/)
+- [Clearbit API](https://clearbit.com/)
+- [jQuery](https://jquery.com/download/)
 
 
