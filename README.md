@@ -24,6 +24,8 @@ This is a simple app to find logos from various top websites.
 - The app will be started and be running on port `3333`.
 - Enter this url `http://localhost:3333/` in your preferred browser and you should get a webpage as shown in the image below:
 
-![Logofynder](https://res.cloudinary.com/maestrojolly/image/upload/v1584271053/logofynder.png)
+![Logofynder](https://res.cloudinary.com/maestrojolly/image/upload/v1584273810/logo-fynder/logofynder.png)
+
+- Yaay, your app is up and running :smiley: :rocket: :rocket: :rocket:
 
 
